@@ -1,10 +1,19 @@
-import React from 'react'
+import React from 'react';
+import { BrowserRouter, Link, Route } from 'react-router-dom';
 
+import { logo } from './assets';
+import { Home, CreatePost } from './pages';
 const App = () => {
-  return (
-    <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
+  return ( 
+    <BrowserRouter>
+      <header className='w-full flex justify-between items-center bg-white sm:px-8 px-4 py-4 border-b border-b-[#e6ebf4]'>
+      <Link to="/">
+      <img src={logo} alt="logo" style={{ width: '100px', height: 'auto' }} />
+      
+
+      </Link>
+      </header>
+    </BrowserRouter> //19.9
   )
 }
 
